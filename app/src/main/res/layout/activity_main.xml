@@ -9,11 +9,213 @@
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </androidx.camera.view.PreviewView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Orientation:\nazimuth(z) pitch(x) roll(y) "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toBottomOf="@+id/viewFinder" />
+
+    <TextView
+        android:id="@+id/orientation0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/orientation1"
+        app:layout_constraintEnd_toStartOf="@+id/orientation1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orientation1" />
+
+    <TextView
+        android:id="@+id/orientation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/orientation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/orientation1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orientation1"
+        app:layout_constraintTop_toTopOf="@+id/orientation1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rotation:"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toBottomOf="@+id/orientation1" />
+
+    <TextView
+        android:id="@+id/rotation0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation1"
+        app:layout_constraintEnd_toStartOf="@+id/rotation1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotation1" />
+
+    <TextView
+        android:id="@+id/rotation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/rotation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotation1"
+        app:layout_constraintTop_toTopOf="@+id/rotation1" />
+
+
+    <TextView
+        android:id="@+id/rotation3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation4"
+        app:layout_constraintEnd_toStartOf="@+id/rotation4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotation4" />
+
+    <TextView
+        android:id="@+id/rotation4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/rotation1"
+        app:layout_constraintStart_toStartOf="@+id/rotation1"
+        app:layout_constraintTop_toBottomOf="@+id/rotation1" />
+
+    <TextView
+        android:id="@+id/rotation5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotation4"
+        app:layout_constraintTop_toTopOf="@+id/rotation4" />
+
+    <TextView
+        android:id="@+id/rotation6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation7"
+        app:layout_constraintEnd_toStartOf="@+id/rotation7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotation7" />
+
+    <TextView
+        android:id="@+id/rotation7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/rotation4"
+        app:layout_constraintStart_toStartOf="@+id/rotation4"
+        app:layout_constraintTop_toBottomOf="@+id/rotation4" />
+
+    <TextView
+        android:id="@+id/rotation8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/rotation7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotation7"
+        app:layout_constraintTop_toTopOf="@+id/rotation7" />
+
+    <ImageView
+        android:id="@+id/spot_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
+        app:layout_constraintEnd_toStartOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="@+id/viewFinder"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/spot_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toEndOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="@+id/viewFinder"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/spot_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/viewFinder"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="@+id/viewFinder"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/spot_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toBottomOf="@+id/viewFinder"
+        app:srcCompat="@android:drawable/presence_online" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
