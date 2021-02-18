@@ -1,6 +1,7 @@
 package com.s.cameralevel
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.hardware.Sensor
@@ -267,6 +268,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         sensorManager.unregisterListener(this)
     }
 
+    @SuppressLint("SetTextI18n")
     fun updateOrientationAngles() {
         // Update rotation matrix, which is needed to update orientation angles.
         SensorManager.getRotationMatrix(
@@ -292,15 +294,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val mSpotLeft =  findViewById<ImageView>(R.id.spot_left);
         val mSpotRight = findViewById<ImageView>(R.id.spot_right);
 
-//        orientation0.text = ((Math.toDegrees(orientationAngles[0].toDouble() + 360) % 360 * 10)
-//            .roundToInt().toFloat() / 10).toString()
-//        orientation1.text = ((Math.toDegrees(orientationAngles[1].toDouble() + 360) % 360 * 10)
-//            .roundToInt().toFloat() / 10).toString()
-//        orientation2.text = ((Math.toDegrees(orientationAngles[2].toDouble() + 360) % 360 * 10)
-//            .roundToInt().toFloat() / 10).toString()
 
-
-        // Pull out the individual values from the array.
         // Pull out the individual values from the array.
         var azimuth: Float = orientationAngles[0]
         var pitch: Float = orientationAngles[1]
@@ -337,11 +331,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 //        }
 
 
-        orientation0.text = roundIt(orientationAngles[0]).toString()
-        orientation1.text = roundIt(orientationAngles[1]).toString()
-        orientation2.text = roundIt(orientationAngles[2]).toString()
 
-
+        orientation0.text = "%.2f".format(orientationAngles[0])
+        orientation1.text = "%.2f".format(orientationAngles[1])
+        orientation2.text = "%.2f".format(orientationAngles[2])
 
 
         val rotation0 = findViewById<TextView>(R.id.rotation0)
@@ -354,28 +347,18 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val rotation7 = findViewById<TextView>(R.id.rotation7)
         val rotation8 = findViewById<TextView>(R.id.rotation8)
 
-        rotation0.text = roundIt(rotationMatrix[0]).toString()
-        rotation1.text = roundIt(rotationMatrix[1]).toString()
-        rotation2.text = roundIt(rotationMatrix[2]).toString()
-        rotation3.text = roundIt(rotationMatrix[3]).toString()
-        rotation4.text = roundIt(rotationMatrix[4]).toString()
-        rotation5.text = roundIt(rotationMatrix[5]).toString()
-        rotation6.text = roundIt(rotationMatrix[6]).toString()
-        rotation7.text = roundIt(rotationMatrix[7]).toString()
-        rotation8.text = roundIt(rotationMatrix[8]).toString()
-
-//        Log.d(TAG, orientationAngles[0].toString())
+        rotation0.text = "%.2f".format(rotationMatrix[0])
+        rotation1.text = "%.2f".format(rotationMatrix[1])
+        rotation2.text = "%.2f".format(rotationMatrix[2])
+        rotation3.text = "%.2f".format(rotationMatrix[3])
+        rotation4.text = "%.2f".format(rotationMatrix[4])
+        rotation5.text = "%.2f".format(rotationMatrix[5])
+        rotation6.text = "%.2f".format(rotationMatrix[6])
+        rotation7.text = "%.2f".format(rotationMatrix[7])
+        rotation8.text = "%.2f".format(rotationMatrix[8])
 
 
     }
-
-
-    private fun roundIt(num: Float): Float{
-        val new = ((num * 100).roundToInt().toFloat() / 100)
-        return new
-    }
-
-
 
 
 }
